@@ -4,9 +4,5 @@ Simple iOS keychain wrapper. This wrapper is meant to be used as a dictionary to
 
 Example usage:
 let keychain = DAKeychain()
-        
-// Store
-keychain["key"] = "confidential data"
-        
-// Fetch
-let value = keychain["key"]
+keychain["key"] = "confidential data" // Store
+let value = keychain["key"] // Fetch
