@@ -9,3 +9,6 @@ let keychain = DAKeychain()
 keychain["key"] = "confidential data" // Store
 
 let value = keychain["key"] // Fetch
+
+You can read more about this wrapper on my blog:
+http://agostini.tech/2017/03/06/creating-a-simple-keychain-wrapper/
