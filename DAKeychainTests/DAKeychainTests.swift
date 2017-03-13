@@ -11,7 +11,7 @@ import XCTest
 
 class DAKeychainTests: XCTestCase {
     
-    func testKeychain() {
+    func testSharedKeychain() {
         let key = "key"
         let expectedValue = "lorem ipsum testing, dolor something..."
         

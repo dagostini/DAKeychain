@@ -10,15 +10,29 @@ import Foundation
 
 class DAKeychain {
     
-    public static let shared = DAKeychain()
-    
     public var loggingEnabled = false
+    
+    private init() {}
+    
+    private static var _shared: DAKeychain?
+    public static var shared: DAKeychain {
+        get {
+            if _shared == nil {
+                DispatchQueue.global().sync(flags: .barrier) {
+                    _shared = DAKeychain()
+                }
+            }
+            return _shared!
+        }
+    }
     
     subscript(key: String) -> String? {
         get {
             return load(withKey: key)
         } set {
-            save(string: newValue, forKey: key)
+            DispatchQueue.global().sync(flags: .barrier) {
+                self.save(string: newValue, forKey: key)
+            }
         }
     }
     
