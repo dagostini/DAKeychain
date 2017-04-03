@@ -19,7 +19,9 @@ class DAKeychain {
         get {
             if _shared == nil {
                 DispatchQueue.global().sync(flags: .barrier) {
-                    _shared = DAKeychain()
+                    if _shared == nil {
+                        _shared = DAKeychain()
+                    }
                 }
             }
             return _shared!
