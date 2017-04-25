@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		195A333A92B458958D52558393EA9CFA /* DAKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 534A8C37EA57FFD4A558693BF33D207B /* DAKeychain-dummy.m */; };
+		212770E69A5385A1235C56B8127B98B1 /* DAKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 534A8C37EA57FFD4A558693BF33D207B /* DAKeychain-dummy.m */; };
 		484CB637C9BC2A57C479DC02BA3055C3 /* Pods-DAKeychain_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A065688DCFADA69428C56C42273D6D5A /* Pods-DAKeychain_Example-dummy.m */; };
-		7742AD331EAF877600154F60 /* DAKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742AD321EAF877600154F60 /* DAKeychain.swift */; };
 		A43A97CF799F71644A1350DA8B1D0982 /* Pods-DAKeychain_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C82E2247BE5239CEA787A54C435825 /* Pods-DAKeychain_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A607693704BD58162C04FFF6FADE45F3 /* DAKeychain-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D245CCABE922DC2EF03A839477F922 /* DAKeychain-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF6BD46640873C5FC8B35B3357F71FBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		CFD3936962A7E06DDF568AFCCD23D4DC /* Pods-DAKeychain_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2B518F1E3DA84E12D403B6D4A83E21 /* Pods-DAKeychain_Tests-dummy.m */; };
 		D15D6261E3805F32ED27D7B1D857F97D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		D849CB2DE8B3A8B25788573E4E98C849 /* DAKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8E23A378D07254B17AA224E989B1A /* DAKeychain.swift */; };
 		DAFA42C4E6ABD08760F81809D2FD4B16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		F28DEAFD2D3476610CA52644F7DE8A74 /* Pods-DAKeychain_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A5B21C2271D446FE2B12955814E7C1 /* Pods-DAKeychain_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -42,7 +42,6 @@
 		534A8C37EA57FFD4A558693BF33D207B /* DAKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DAKeychain-dummy.m"; sourceTree = "<group>"; };
 		54A83D7EC9E963FF1DB434E62B0459D8 /* Pods-DAKeychain_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DAKeychain_Tests-resources.sh"; sourceTree = "<group>"; };
 		6CF10E068BED8E82B57808C83DAC3B5D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7742AD321EAF877600154F60 /* DAKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAKeychain.swift; sourceTree = "<group>"; };
 		78A5B21C2271D446FE2B12955814E7C1 /* Pods-DAKeychain_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DAKeychain_Example-umbrella.h"; sourceTree = "<group>"; };
 		7C2B518F1E3DA84E12D403B6D4A83E21 /* Pods-DAKeychain_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DAKeychain_Tests-dummy.m"; sourceTree = "<group>"; };
 		7D4E307173A9C12FB9CE1827E66B4AB7 /* Pods_DAKeychain_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DAKeychain_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +56,7 @@
 		CE451DF456EFA2F4721692185BC8212E /* Pods-DAKeychain_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DAKeychain_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D6B92D273926637D19A56B7FA7D967C5 /* DAKeychain.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DAKeychain.modulemap; sourceTree = "<group>"; };
+		D7E8E23A378D07254B17AA224E989B1A /* DAKeychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DAKeychain.swift; sourceTree = "<group>"; };
 		E8C9D2A5E28C356139624F24B1FBCB55 /* Pods-DAKeychain_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DAKeychain_Example-frameworks.sh"; sourceTree = "<group>"; };
 		E93EB29D13B7110DEF94E9099791813A /* Pods-DAKeychain_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DAKeychain_Tests.modulemap"; sourceTree = "<group>"; };
 		F075D1B7181E99437C6CAE0F83E9BA56 /* DAKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DAKeychain-prefix.pch"; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		0FF1FB333C85CD05586EE2619B410BB3 /* DAKeychain */ = {
 			isa = PBXGroup;
 			children = (
-				AD9D70FC5BC231C477370BEECEFE73C5 /* Classes */,
+				485F3391D384FDC43C4C02B942A71C78 /* Classes */,
 			);
 			path = DAKeychain;
 			sourceTree = "<group>";
@@ -134,6 +134,14 @@
 				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		485F3391D384FDC43C4C02B942A71C78 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D7E8E23A378D07254B17AA224E989B1A /* DAKeychain.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		518B3552B0704084D73C5B82C756291F /* Support Files */ = {
@@ -196,14 +204,6 @@
 				340CC804C9D19F5FD5ACA9C51510CCFA /* Products */,
 				649479A36CB6F414C9B50CBA3E45F704 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		AD9D70FC5BC231C477370BEECEFE73C5 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				7742AD321EAF877600154F60 /* DAKeychain.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -274,7 +274,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBCE4567326F2A000CD508605E5FA8A8 /* Build configuration list for PBXNativeTarget "DAKeychain" */;
 			buildPhases = (
-				E998588096E14AC4B41C36A6F1FDA0C5 /* Sources */,
+				3D0976C7B8A47B97C23A64FC852F5173 /* Sources */,
 				C82F5D028DD24A6AE6494CB7D6B78932 /* Frameworks */,
 				9BF3C66857D3F6D6504254E4E5CA61A8 /* Headers */,
 			);
@@ -349,20 +349,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3D0976C7B8A47B97C23A64FC852F5173 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212770E69A5385A1235C56B8127B98B1 /* DAKeychain-dummy.m in Sources */,
+				D849CB2DE8B3A8B25788573E4E98C849 /* DAKeychain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4AC0A11159E3DAC49EF8804F46C1836 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				484CB637C9BC2A57C479DC02BA3055C3 /* Pods-DAKeychain_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E998588096E14AC4B41C36A6F1FDA0C5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				195A333A92B458958D52558393EA9CFA /* DAKeychain-dummy.m in Sources */,
-				7742AD331EAF877600154F60 /* DAKeychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

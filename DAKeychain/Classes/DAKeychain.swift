@@ -8,14 +8,14 @@
 
 import Foundation
 
-public class DAKeychain {
+open class DAKeychain {
     
-    public var loggingEnabled = false
+    open var loggingEnabled = false
     
-    private init() {}
+    fileprivate init() {}
     
-    private static var _shared: DAKeychain?
-    public static var shared: DAKeychain {
+    fileprivate static var _shared: DAKeychain?
+    open static var shared: DAKeychain {
         get {
             if _shared == nil {
                 DispatchQueue.global().sync(flags: .barrier) {
@@ -28,17 +28,17 @@ public class DAKeychain {
         }
     }
     
-    public subscript(key: String) -> String? {
+    open subscript(key: String) -> String? {
         get {
             return load(withKey: key)
         } set {
             DispatchQueue.global().sync(flags: .barrier) {
-                self.save(string: newValue, forKey: key)
+                self.save(newValue, forKey: key)
             }
         }
     }
     
-    private func save(string: String?, forKey key: String) {
+    fileprivate func save(_ string: String?, forKey key: String) {
         let query = keychainQuery(withKey: key)        
         let objectData: Data? = string?.data(using: .utf8, allowLossyConversion: false)
 
@@ -59,7 +59,7 @@ public class DAKeychain {
         }
     }
     
-    private func load(withKey key: String) -> String? {
+    fileprivate func load(withKey key: String) -> String? {
         let query = keychainQuery(withKey: key)
         query.setValue(kCFBooleanTrue, forKey: kSecReturnData as String)
         query.setValue(kCFBooleanTrue, forKey: kSecReturnAttributes as String)
@@ -78,7 +78,7 @@ public class DAKeychain {
         return String(data: resultsData, encoding: .utf8)
     }
     
-    private func keychainQuery(withKey key: String) -> NSMutableDictionary {
+    fileprivate func keychainQuery(withKey key: String) -> NSMutableDictionary {
         let result = NSMutableDictionary()
         result.setValue(kSecClassGenericPassword, forKey: kSecClass as String)
         result.setValue(key, forKey: kSecAttrService as String)
@@ -86,7 +86,7 @@ public class DAKeychain {
         return result
     }
     
-    private func logPrint(_ items: Any...) {
+    fileprivate func logPrint(_ items: Any...) {
         if loggingEnabled {
             print(items)
         }
