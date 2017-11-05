@@ -12,9 +12,9 @@ open class DAKeychain {
     
     open var loggingEnabled = false
     
-    fileprivate init() {}
+    private init() {}
     
-    fileprivate static var _shared: DAKeychain?
+    private static var _shared: DAKeychain?
     open static var shared: DAKeychain {
         get {
             if _shared == nil {
@@ -38,7 +38,7 @@ open class DAKeychain {
         }
     }
     
-    fileprivate func save(_ string: String?, forKey key: String) {
+    private func save(_ string: String?, forKey key: String) {
         let query = keychainQuery(withKey: key)        
         let objectData: Data? = string?.data(using: .utf8, allowLossyConversion: false)
 
@@ -59,7 +59,7 @@ open class DAKeychain {
         }
     }
     
-    fileprivate func load(withKey key: String) -> String? {
+    private func load(withKey key: String) -> String? {
         let query = keychainQuery(withKey: key)
         query.setValue(kCFBooleanTrue, forKey: kSecReturnData as String)
         query.setValue(kCFBooleanTrue, forKey: kSecReturnAttributes as String)
@@ -78,7 +78,7 @@ open class DAKeychain {
         return String(data: resultsData, encoding: .utf8)
     }
     
-    fileprivate func keychainQuery(withKey key: String) -> NSMutableDictionary {
+    private func keychainQuery(withKey key: String) -> NSMutableDictionary {
         let result = NSMutableDictionary()
         result.setValue(kSecClassGenericPassword, forKey: kSecClass as String)
         result.setValue(key, forKey: kSecAttrService as String)
@@ -86,7 +86,7 @@ open class DAKeychain {
         return result
     }
     
-    fileprivate func logPrint(_ items: Any...) {
+    private func logPrint(_ items: Any...) {
         if loggingEnabled {
             print(items)
         }
