@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DAKeychain'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'DAKeychain is a simple keychain wrapper that acts like a dictionary.'
   s.description      = <<-DESC
 I created this small library for fun. I wanted to abstract all that boilerplate code when working with the keychain and I wanted to make working with the keychain as simple as possible. So I created this. This library will behave like a dictionary when working with the keychain. It's pretty simple to use.
