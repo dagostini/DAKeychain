@@ -15,7 +15,7 @@ open class DAKeychain {
     private init() {}
     
     private static var _shared: DAKeychain?
-    open static var shared: DAKeychain {
+    public static var shared: DAKeychain {
         get {
             if _shared == nil {
                 DispatchQueue.global().sync(flags: .barrier) {
