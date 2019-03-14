@@ -13,20 +13,7 @@ open class DAKeychain {
     open var loggingEnabled = false
     
     private init() {}
-    
-    private static var _shared: DAKeychain?
-    public static var shared: DAKeychain {
-        get {
-            if _shared == nil {
-                DispatchQueue.global().sync(flags: .barrier) {
-                    if _shared == nil {
-                        _shared = DAKeychain()
-                    }
-                }
-            }
-            return _shared!
-        }
-    }
+    public static let shared = DAKeychain()
     
     open subscript(key: String) -> String? {
         get {
